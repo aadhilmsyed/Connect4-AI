@@ -256,22 +256,22 @@ class minimaxAI(connect4Player):
     def eval_piece(self, value, p1_count, p2_count, p1_eval, p2_eval):
         if value == 1:
             p1_count[0] += 1
-            if p2_count[0]: p2_eval[p2_count[0] - 1] += 1
+            if p2_count[0]: p2_eval[min(3, (p2_count[0] - 1))] += 1
             p2_count[0] = 0
         elif value == 2:
             p2_count[0] += 1
-            if p1_count[0]: p1_eval[p1_count[0] - 1] += 1
+            if p1_count[0]: p1_eval[min(3, (p1_count[0] - 1))] += 1
             p1_count[0] = 0
         else:
-            if p1_count[0]: p1_eval[p1_count[0] - 1] += 1
-            if p2_count[0]: p2_eval[p2_count[0] - 1] += 1
+            if p1_count[0]: p1_eval[min(3, (p1_count[0] - 1))] += 1
+            if p2_count[0]: p2_eval[min(3, (p2_count[0] - 1))] += 1
             p1_count[0] = 0
             p2_count[0] = 0
             
             
     def eval_overflow(self, p1_count, p2_count, p1_eval, p2_eval):
-            if p1_count[0]: p1_eval[p1_count[0] - 1] += 1
-            if p2_count[0]: p2_eval[p2_count[0] - 1] += 1
+            if p1_count[0]: p1_eval[min(3, (p1_count[0] - 1))] += 1
+            if p2_count[0]: p2_eval[min(3, (p2_count[0] - 1))] += 1
             p1_count[0] = 0
             p2_count[0] = 0
     
@@ -460,22 +460,22 @@ class alphaBetaAI(connect4Player):
     def eval_piece(self, value, p1_count, p2_count, p1_eval, p2_eval):
         if value == 1:
             p1_count[0] += 1
-            if p2_count[0]: p2_eval[p2_count[0] - 1] += 1
+            if p2_count[0]: p2_eval[min(3, (p2_count[0] - 1))] += 1
             p2_count[0] = 0
         elif value == 2:
             p2_count[0] += 1
-            if p1_count[0]: p1_eval[p1_count[0] - 1] += 1
+            if p1_count[0]: p1_eval[min(3, (p1_count[0] - 1))] += 1
             p1_count[0] = 0
         else:
-            if p1_count[0]: p1_eval[p1_count[0] - 1] += 1
-            if p2_count[0]: p2_eval[p2_count[0] - 1] += 1
+            if p1_count[0]: p1_eval[min(3, (p1_count[0] - 1))] += 1
+            if p2_count[0]: p2_eval[min(3, (p2_count[0] - 1))] += 1
             p1_count[0] = 0
             p2_count[0] = 0
             
             
     def eval_overflow(self, p1_count, p2_count, p1_eval, p2_eval):
-            if p1_count[0]: p1_eval[p1_count[0] - 1] += 1
-            if p2_count[0]: p2_eval[p2_count[0] - 1] += 1
+            if p1_count[0]: p1_eval[min(3, (p1_count[0] - 1))] += 1
+            if p2_count[0]: p2_eval[min(3, (p2_count[0] - 1))] += 1
             p1_count[0] = 0
             p2_count[0] = 0
 
