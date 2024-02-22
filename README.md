@@ -1,8 +1,11 @@
 # Connect-4 AI Algorithm
 
-This was a project that I completed for the "Intro to Artificial Intelligence" course at my university. I devised and implemented an intelligent algorithm to compete against other high-level AI agents and even humans. The starter code was provided initially by the instructors of the course, and I implemented the AI algorithm in the `players.py` file. 
+## Minimax AI Algorithm
 
 I implemented two variants of the minimax algorithm: the original minimax and an optimized version using alpha-beta pruning. The latter offers a more efficient solution by reducing the number of nodes evaluated in the search tree. The implementation adheres to the time constraint of 0.5 seconds per move, ensuring timely decision-making during gameplay. Both algorithms determine a move based on the nash equillibrium returned by the evaluation function.
+
+
+## Evaluation and Heuristic Function
 
 The evaluation function I devised considers the number of consecutive pieces on the board for both players. Each configuration of consecutive pieces is assigned a weight proportional to its likeliness to victory. By calculating the utility of the current game state for both the player and opponent, we can determine the desirability of a move. The difference between the player's utility and the opponent's utility serves as the overall evaluation score for a given game state. For my sucessor function which determines which column to explore first to maximize pruning, I ordered the columns based on a priority order of middle first, then corners, then everything else.
 
