@@ -9,9 +9,9 @@ The evaluation function I devised considers the number of consecutive pieces on 
 
 ## Agent Performance
 
-The AI agent was rigorously tested against benchmark opponents, including StupidAI, RandomAI, and MonteCarloAI. The results demonstrate the agent's proficiency, achieving significant victories against StupidAI and RandomAI. However, challenges arose when facing the more competitive MonteCarloAI. Despite the AI's respectable performance, certain limitations, such as the restricted search depth, hindered its ability to outperform MonteCarloAI consistently.
+The AI agent underwent rigorous testing against benchmark opponents, including StupidAI, RandomAI, and MonteCarloAI. While it demonstrated proficiency, achieving significant victories against StupidAI and RandomAI, it faced challenges against the more competitive MonteCarloAI. Despite its respectable performance, limitations such as restricted search depth hindered its ability to consistently outperform MonteCarloAI.
 
-The final performance of the AI agent against benchmark opponents is summarized below:
+The final performance results of the AI agent against benchmark opponents are summarized below:
 
 | Opponent     | Wins | Ties | Losses |
 |--------------|------|------|--------|
@@ -19,7 +19,7 @@ The final performance of the AI agent against benchmark opponents is summarized 
 | RandomAI     | 10   | 0    | 0      |
 | MonteCarloAI | 13   | 0    | 7      |
 
-While the AI agent demonstrated competitive prowess, further optimization, particularly in expanding the search depth, could enhance its capabilities, potentially yielding improved results against formidable opponents like MonteCarloAI.
+While these results were obtained using a search depth of 3, it's noteworthy that running the algorithm with a depth of 4 resulted in undefeated performance against MonteCarloAI. This suggests that further optimization, particularly by expanding the search depth, could significantly enhance the agent's capabilities, potentially yielding improved results against formidable opponents like MonteCarloAI.
 
 
 ## Running this Program
