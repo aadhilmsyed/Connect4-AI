@@ -1,4 +1,4 @@
-# Connect-4 AI Algorithm
+# Connect-4 AI
 
 ## Minimax AI Algorithm
 
